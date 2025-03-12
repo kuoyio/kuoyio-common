@@ -1,6 +1,16 @@
 plugins {
     alias(libs.plugins.java)
+    alias(libs.plugins.springboot)
+    alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.maven.publish)
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
 }
 
 java {
@@ -10,7 +20,7 @@ java {
 }
 
 group = 'io.github.kuoyio'
-version = '0.0.3'
+version = '0.0.4'
 
 repositories {
     mavenCentral()
@@ -18,7 +28,10 @@ repositories {
 
 dependencies {
     implementation libs.project.lombok
+    implementation libs.spring.web
     annotationProcessor libs.project.lombok
+    
+    testImplementation libs.bundles.test
 }
 
 publishing {

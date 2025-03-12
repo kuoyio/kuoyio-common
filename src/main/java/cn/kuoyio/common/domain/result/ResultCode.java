@@ -1,5 +1,6 @@
 package cn.kuoyio.common.domain.result;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
