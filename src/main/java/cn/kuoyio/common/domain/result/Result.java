@@ -10,8 +10,27 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 public class Result<T> implements Serializable {
-    private static final long serialVersionUID = 1L;
     private String code;
     private String message;
     private T data;
+
+    public static <T> Result<T> success() {
+        return Result.<T>builder()
+                .code(ResultCode.SUCCESS.getCode())
+                .build();
+    }
+
+    public static <T> Result<T> success(T data) {
+        return Result.<T>builder()
+                .code(ResultCode.SUCCESS.getCode())
+                .data(data)
+                .build();
+    }
+
+    public static <T> Result<T> error(String code, String message) {
+        return Result.<T>builder()
+                .code(code)
+                .message(message)
+                .build();
+    }
 }
