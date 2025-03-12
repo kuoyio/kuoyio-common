@@ -12,6 +12,10 @@ java {
 group = 'io.github.kuoyio'
 version = '0.0.1'
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     implementation libs.project.lombok
     annotationProcessor libs.project.lombok
