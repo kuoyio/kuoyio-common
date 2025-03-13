@@ -1,6 +1,6 @@
 package cn.kuoyio.common.domain.exception;
 
-import cn.kuoyio.common.domain.result.ResultCode;
+import cn.kuoyio.common.domain.result.ResponseCode;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import java.util.List;
