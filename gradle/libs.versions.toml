@@ -4,6 +4,7 @@ springboot = "3.4.3"
 springboot-dependency-management = "1.1.7"
 junit = "5.10.2"
 assertj = "3.25.3"
+jacoco = "0.8.11"
 
 [libraries]
 project-lombok = { module = "org.projectlombok:lombok", version = "1.18.36" }
@@ -22,8 +23,9 @@ test = ["junit-jupiter", "assertj-core"]
 
 [plugins]
 java = { id = "java" }
-maven-publish = { id = "maven-publish" }
 springboot = { id = "org.springframework.boot", version.ref = "springboot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springboot-dependency-management" }
+maven-publish = { id = "maven-publish" }
+jacoco = { id = "jacoco" }
 
 
