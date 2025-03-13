@@ -6,6 +6,9 @@ plugins {
     alias(libs.plugins.jacoco)
 }
 
+group = 'io.github.kuoyio'
+version = '0.0.4'
+
 bootJar {
     enabled = false
 }
@@ -19,9 +22,6 @@ java {
         languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
     }
 }
-
-group = 'io.github.kuoyio'
-version = '0.0.4'
 
 repositories {
     mavenCentral()
@@ -69,7 +69,7 @@ jacocoTestReport {
     }
 
     reports {
-        xml.required.set(false)
+        xml.required.set(true)
         csv.required.set(false)
         html.required.set(true)
     }
@@ -78,7 +78,18 @@ jacocoTestReport {
 jacocoTestCoverageVerification {
     violationRules {
         rule {
+            element = 'CLASS'
+            excludes = ['**/domain/exception/**', '**/config/**', '**/dto/**', '**/entity/**']
+            
             limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.9
+            }
+            
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
                 minimum = 0.9
             }
         }
