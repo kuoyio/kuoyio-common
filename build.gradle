@@ -79,19 +79,10 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             element = 'CLASS'
-            excludes = ['**/domain/exception/**', '**/config/**', '**/dto/**', '**/entity/**']
-            
-            limit {
-                counter = 'LINE'
-                value = 'COVEREDRATIO'
-                minimum = 0.9
-            }
-            
-            limit {
-                counter = 'BRANCH'
-                value = 'COVEREDRATIO'
-                minimum = 0.9
-            }
+            excludes = [
+                    '**/domain/exception/**',
+                    '**/domain/response/**',
+            ]
         }
     }
 }

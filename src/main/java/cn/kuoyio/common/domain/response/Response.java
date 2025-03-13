@@ -1,4 +1,4 @@
-package cn.kuoyio.common.domain.result;
+package cn.kuoyio.common.domain.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
