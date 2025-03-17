@@ -29,7 +29,9 @@ repositories {
 
 dependencies {
     implementation libs.project.lombok
+    implementation libs.jakarta.persistence
     implementation libs.spring.web
+    implementation libs.spring.boot.starter.data.jpa
     annotationProcessor libs.project.lombok
     
     testImplementation libs.bundles.test
