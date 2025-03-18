@@ -32,7 +32,7 @@ public abstract class EntityBase {
     private LocalDateTime createdTime;
     @LastModifiedDate
     private LocalDateTime updatedTime;
-    private Boolean isDeleted = false;
+    private Boolean isDeleted;
 }
 
 
