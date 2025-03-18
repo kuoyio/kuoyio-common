@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'io.github.kuoyio'
-version = '0.0.9'
+version = '0.0.10'
 
 bootJar {
     enabled = false
