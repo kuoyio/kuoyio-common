@@ -5,10 +5,12 @@ springboot-dependency-management = "1.1.7"
 junit = "5.10.2"
 assertj = "3.25.3"
 jacoco = "0.8.11"
+project-lombok = "1.18.36"
+jakarta-persistence = "3.1.0"
 
 [libraries]
-project-lombok = { module = "org.projectlombok:lombok", version = "1.18.36" }
-jakarta-persistence = { module = "jakarta.persistence:jakarta.persistence-api", version = "3.1.0" }
+project-lombok = { module = "org.projectlombok:lombok", version.ref = "project-lombok" }
+jakarta-persistence = { module = "jakarta.persistence:jakarta.persistence-api", version.ref = "jakarta-persistence" }
 spring-web = { module = "org.springframework:spring-web" }
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
 spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
@@ -28,5 +30,6 @@ springboot = { id = "org.springframework.boot", version.ref = "springboot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springboot-dependency-management" }
 maven-publish = { id = "maven-publish" }
 jacoco = { id = "jacoco" }
+version-catalog = { id = "version-catalog" }
 
 
