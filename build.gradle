@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.maven.publish)
     alias(libs.plugins.jacoco)
-    alias(libs.plugins.version.catalog)
 }
 
 group = 'io.github.kuoyio'

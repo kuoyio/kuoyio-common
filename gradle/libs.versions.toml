@@ -30,6 +30,5 @@ springboot = { id = "org.springframework.boot", version.ref = "springboot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springboot-dependency-management" }
 maven-publish = { id = "maven-publish" }
 jacoco = { id = "jacoco" }
-version-catalog = { id = "version-catalog" }
 
 
