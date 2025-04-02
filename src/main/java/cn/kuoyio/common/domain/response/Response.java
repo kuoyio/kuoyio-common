@@ -13,25 +13,20 @@ public class Response<T> implements Serializable {
     private String code;
     private String message;
     private T data;
+    private static final String SUCCESS_MESSAGE = "Success";
 
     public static <T> Response<T> success() {
         return Response.<T>builder()
                 .code(ResponseCode.SUCCESS.getCode())
+                .message(SUCCESS_MESSAGE)
                 .build();
     }
 
     public static <T> Response<T> success(T data) {
         return Response.<T>builder()
                 .code(ResponseCode.SUCCESS.getCode())
+                .message(SUCCESS_MESSAGE)
                 .data(data)
-                .build();
-    }
-
-    public static <T> Response<T> success(T data, String message) {
-        return Response.<T>builder()
-                .code(ResponseCode.SUCCESS.getCode())
-                .data(data)
-                .message(message)
                 .build();
     }
 
