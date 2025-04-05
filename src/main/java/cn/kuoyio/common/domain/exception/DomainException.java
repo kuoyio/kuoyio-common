@@ -26,6 +26,18 @@ public abstract class DomainException extends RuntimeException {
     }
 
     protected DomainException(
+            String code,
+            String message
+    ) {
+        super(message, null);
+        this.code = code;
+        this.message = message;
+        this.httpStatus = HttpStatus.BAD_REQUEST;
+        this.data = null;
+        this.defaultMessage = null;
+    }
+
+    protected DomainException(
         String code,
         String message,
         Throwable cause
