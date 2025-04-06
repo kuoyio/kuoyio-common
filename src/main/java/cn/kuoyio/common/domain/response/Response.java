@@ -1,5 +1,6 @@
 package cn.kuoyio.common.domain.response;
 
+import cn.kuoyio.common.domain.exception.DomainException;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -42,6 +43,14 @@ public class Response<T> implements Serializable {
                 .code(code)
                 .message(message)
                 .data(data)
+                .build();
+    }
+
+    public static <T> Response<T> error(DomainException domainException) {
+        return Response.<T>builder()
+                .code(domainException.getCode())
+                .message(domainException.getMessage())
+                .data(null)
                 .build();
     }
 }
