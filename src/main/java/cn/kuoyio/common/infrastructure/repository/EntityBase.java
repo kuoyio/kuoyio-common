@@ -35,7 +35,7 @@ public abstract class EntityBase {
     @Column(name = "updated_time")
     @LastModifiedDate
     private LocalDateTime updatedTime;
-    @Column(name = "is_deleted")
+    @Column(name = "is_deleted", insertable = false, updatable = false)
     private Boolean isDeleted;
 }
 
