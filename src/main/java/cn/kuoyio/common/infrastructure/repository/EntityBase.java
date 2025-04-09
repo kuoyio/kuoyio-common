@@ -1,5 +1,6 @@
 package cn.kuoyio.common.infrastructure.repository;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,9 +30,12 @@ public abstract class EntityBase {
     @EntityId
     private String id;
     @CreatedDate
+    @Column(name = "created_time")
     private LocalDateTime createdTime;
+    @Column(name = "updated_time")
     @LastModifiedDate
     private LocalDateTime updatedTime;
+    @Column(name = "is_deleted")
     private Boolean isDeleted;
 }
 
