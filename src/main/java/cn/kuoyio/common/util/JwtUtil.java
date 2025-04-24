@@ -13,7 +13,11 @@ import java.util.Map;
 
 
 public class JwtUtil {
-    private static final long DEFAULT_EXPIRATION_TIME = (long) 60 * 60;
+    private static final long DEFAULT_EXPIRATION_TIME = 60 * 60 * 1000L;
+
+    public static String generate(String secret) {
+        return generate(secret, DEFAULT_EXPIRATION_TIME, null, null);
+    }
 
     public static String generate(String secret, String subject, Map<String, Object> claims) {
         return generate(secret, DEFAULT_EXPIRATION_TIME, subject, claims);
