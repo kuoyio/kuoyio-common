@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'io.github.kuoyio'
-version = '0.0.25'
+version = '0.0.26'
 
 bootJar {
     enabled = false
@@ -27,6 +27,7 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencies {
